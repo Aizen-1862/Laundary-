@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Laundry — Submission</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+
+    <section id="formScreen" class="screen active">
+      <header class="hero">
+        <div class="logo">LAUNDRY</div>
+        <p>Have an idea of what you submitted.</p>
+        <p class="subtext">Select the items you are giving to laundry.</p>
+      </header>
+
+      <section class="items-card">
+        <div id="itemsGrid" class="items-grid"></div>
+      </section>
+
+      <button id="submitBtn" class="primary-btn" type="button">
+        Submit Laundry
+      </button>
+
+      <p id="errorMessage" class="error-message" aria-live="polite"></p>
+    </section>
+
+    <section id="receiptScreen" class="screen">
+      <div class="receipt-card">
+        <div class="receipt-head">
+          <div class="receipt-logo">LAUNDRY</div>
+          <div class="receipt-title">Submission Receipt</div>
+          <div class="success-icon">✓</div>
+          <h1>Laundry Submitted</h1>
+          <p>Your items have been recorded successfully.</p>
+        </div>
+
+        <div class="receipt-meta">
+          <div>
+            <span>Receipt No.</span>
+            <strong id="receiptNumber">—</strong>
+          </div>
+          <div>
+            <span>Date</span>
+            <strong id="receiptDate">—</strong>
+          </div>
+          <div>
+            <span>Time</span>
+            <strong id="receiptTime">—</strong>
+          </div>
+        </div>
+
+        <div class="receipt-items">
+          <div class="receipt-row receipt-header">
+            <span>Item</span>
+            <span>Qty</span>
+          </div>
+          <div id="receiptItems"></div>
+        </div>
+
+        <div class="total-row">
+          <span>Total Items</span>
+          <strong id="totalItems">0</strong>
+        </div>
+      </div>
+
+      <div class="receipt-actions">
+        <button id="printBtn" class="secondary-btn" type="button">🖨️ Print Receipt</button>
+        <button id="newBtn" class="primary-btn" type="button">＋ New Submission</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
